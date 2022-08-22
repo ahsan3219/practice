@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="Do(); return false">
+    Obtained marks
+<input type="text" id="obt" required>
+
+Total marks
+<input type="text" id="tot" required>
+<button onsubmit="Do(); return false">Submit</button>
+<h1>Result</h1><h1 id="result1"></h1><h1 id="result"></h1>
+</form>
+    <script>
+        function Do(){
+        a=+document.querySelector("#obt").innerHTML;
+        b=+document.querySelector("#tot").innerHTML;
+        p=(a/b)*100;
+        let sum=document.querySelector("#result1")=p;
+        if(p>=80){
+        p="You got A-one"
+            let sum=document.querySelector("#result")=p;
+            
+        }
+        else if(p>=70){
+            p="You got A"
+            let sum=document.querySelector("#result")=p;
+            
+        }
+
+        else if(p>=60){
+            p="You got B"
+            let sum=document.querySelector("#result")=p;
+            
+        }
+
+        else if(p>=50){
+            p="You got C"
+            let sum=document.querySelector("#result")=p;
+            
+        }
+else{
+
+    p="You are fail"
+            let sum=document.querySelector("#result")=p;
+     
+}
+
+
+        }
+
+    </script>
+</body>
+</html>
